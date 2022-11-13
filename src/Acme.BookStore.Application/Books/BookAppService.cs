@@ -17,6 +17,21 @@ namespace Acme.BookStore.Books
         {
 
         }
-        
+
+        protected override Book MapToEntity(CreateUpdateBookDto createInput)
+        {
+            return base.MapToEntity(createInput);
+        }
+
+        protected override Task<Book> MapToEntityAsync(CreateUpdateBookDto createInput)
+        {
+            return base.MapToEntityAsync(createInput);
+        }
+
+        public override Task<BookDto> CreateAsync(CreateUpdateBookDto input)
+        {
+            return base.CreateAsync(input);
+        }
+
     }
 }
